@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar';
+import { Container, Grid } from '@material-ui/core';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
+      <Grid
+        container
+        direction="column"
+        justify="flex-start"
+        alignItems="center"
+      >
+        <Grid item>
+          <Container maxWidth='xl' id='about' style={{ backgroundColor: '#272935' }}>
+            <h1>About</h1>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container style={{ backgroundColor: '#23252f' }} m={1000}>
+            <h1>Projects</h1>
+          </Container>
+        </Grid>
+      </Grid>
     </div>
   );
 }
