@@ -1,25 +1,32 @@
-import React, { useState } from 'react';
-import { Tabs, Tab, AppBar } from '@material-ui/core';
+import React from 'react';
+import { AppBar, Toolbar, Typography, Button, makeStyles } from '@material-ui/core';
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
 
-export default function NavBar () {
-  const [currentPage, setCurrentPage] = useState(0);
-  const handleChange = (event, newValue) => {
-    setCurrentPage(newValue);
-  };
-  
+export default function NavBar ({onscroll, about, project, contact}) {
+  const classes = useStyles();
+
+
   return (
     <AppBar position='static' color='transparent'>
-      <Tabs
-        value={currentPage}
-        onChange={handleChange}
-        indicatorColor="primary"
-        textColor="primary"
-        centered
-      >
-        <Tab label="Item One" />
-        <Tab label="Item Two" />
-        <Tab label="Item Three" />
-      </Tabs>
+      <Toolbar>
+        <Typography variant="h6" className={classes.title}>
+          Tony Liao
+        </Typography>
+        <Button color="inherit" onClick={() => onscroll(about)}>About Me</Button>
+        <Button color="inherit" onClick={() => onscroll(project)}>Projects</Button>
+        <Button color="inherit">Resume</Button>
+        <Button color="inherit" onClick={() => onscroll(contact)}>Contact</Button>
+      </Toolbar>
     </AppBar>
   )
 };
