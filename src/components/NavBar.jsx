@@ -9,17 +9,18 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    cursor: 'pointer'
   },
 }));
 
-export default function NavBar ({onscroll, about, project, contact}) {
+export default function NavBar ({onscroll, intro, about, project, contact}) {
   const classes = useStyles();
 
 
   return (
-    <AppBar position='static' color='transparent'>
+    <AppBar position='fixed' color='transparent' elevation={0}>
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant="h6" className={classes.title} onClick={() => onscroll(intro)}>
           Tony Liao
         </Typography>
         <Button color="inherit" onClick={() => onscroll(about)}>About Me</Button>

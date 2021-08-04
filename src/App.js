@@ -1,8 +1,10 @@
 import NavBar from './components/NavBar';
 import Intro from './components/Intro';
+import About from './components/About';
 import { useRef } from 'react'
 import { Container, Grid, Typography } from '@material-ui/core';
 const App = () => {
+  let introRef = useRef();
   let aboutRef = useRef();
   let contactRef = useRef();
   let projectRef = useRef();
@@ -13,6 +15,7 @@ const App = () => {
     <div>
       <NavBar
         onscroll={scrollExecute}
+        intro={introRef}
         about={aboutRef}
         project={projectRef}
         contact={contactRef}
@@ -23,16 +26,14 @@ const App = () => {
         justifyContent="flex-start"
         alignItems="center"
       >
-        <Grid item>
+        <Grid item ref={introRef}>
           <Intro 
             onscroll={scrollExecute}
             about={aboutRef}
           />
         </Grid>
         <Grid item ref={aboutRef}>
-          <Container maxWidth='xl' style={{height: '100vh'}}>
-            <Typography variant="h3" align="center">full stack developer currently studying at UNSW as Software Engineer student</Typography>
-          </Container>
+          <About />
         </Grid>
         <Grid item ref={projectRef}>
           <Container m={1000} id="project" style={{height: '100vh'}}>

@@ -31,9 +31,11 @@ export default function Intro ({onscroll, about}) {
   `;
   const upDown = keyframes`
   0%, 100% {
+    opacity: 75%;
     transform: translateY(0);
   }
   50% {
+    opacity: 100%;
     transform: translateY(10px);
   }
 `;
