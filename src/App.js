@@ -25,17 +25,19 @@ const App = () => {
         <Grid item ref={aboutRef}>
           <Container maxWidth='xl' style={{textAlign: 'center'}}>
             <h1>About</h1>
-            <p>I'm Tony Liao, a full stack developer</p>
+            <p>I'm Tony Liao, a full stack developer currently studying at UNSW as Software engineer student</p>
           </Container>
         </Grid>
         <Grid item ref={projectRef}>
-          <Container m={1000} id="project">
+          <Container m={1000} id="project" style={{textAlign: 'center'}}>
             <h1 id="project">Projects</h1>
+            <p>blah blah</p>
           </Container>
         </Grid>
-        <Grid item ref={contactRef} >
+        <Grid item ref={contactRef} style={{textAlign: 'center'}}>
           <Container m={1000}>
             <h1>Contact me</h1>
+            <p>Email me at Tonyliao2009@gmail.com</p>
           </Container>
         </Grid>
       </Grid>

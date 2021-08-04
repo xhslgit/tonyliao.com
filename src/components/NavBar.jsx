@@ -24,7 +24,7 @@ export default function NavBar ({onscroll, about, project, contact}) {
         </Typography>
         <Button color="inherit" onClick={() => onscroll(about)}>About Me</Button>
         <Button color="inherit" onClick={() => onscroll(project)}>Projects</Button>
-        <Button color="inherit">Resume</Button>
+        <Button color="inherit" onClick={() => window.open("https://drive.google.com/file/d/1SSmlDhVNRbudPnBpJe_pgn9TcOHcGJCP/view?usp=sharing")}>Resume</Button>
         <Button color="inherit" onClick={() => onscroll(contact)}>Contact</Button>
       </Toolbar>
     </AppBar>
