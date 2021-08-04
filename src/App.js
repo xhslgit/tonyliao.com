@@ -1,6 +1,7 @@
 import NavBar from './components/NavBar';
+import Intro from './components/Intro';
 import { useRef } from 'react'
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
 const App = () => {
   let aboutRef = useRef();
   let contactRef = useRef();
@@ -19,25 +20,32 @@ const App = () => {
       <Grid
         container
         direction="column"
-        justify="flex-start"
+        justifyContent="flex-start"
         alignItems="center"
       >
+        <Grid item>
+          <Intro 
+            onscroll={scrollExecute}
+            about={aboutRef}
+          />
+        </Grid>
         <Grid item ref={aboutRef}>
-          <Container maxWidth='xl' style={{textAlign: 'center'}}>
-            <h1>About</h1>
-            <p>I'm Tony Liao, a full stack developer currently studying at UNSW as Software engineer student</p>
+          <Container maxWidth='xl' style={{height: '100vh'}}>
+            <Typography variant="h3" align="center">full stack developer currently studying at UNSW as Software Engineer student</Typography>
           </Container>
         </Grid>
         <Grid item ref={projectRef}>
-          <Container m={1000} id="project" style={{textAlign: 'center'}}>
-            <h1 id="project">Projects</h1>
-            <p>blah blah</p>
+          <Container m={1000} id="project" style={{height: '100vh'}}>
+            <Typography variant="h3" align="center">Projects</Typography>
+            <Typography variant="h4">LoLDodgeList</Typography>
+            <Typography variant="h4">BigBrain</Typography>
+            
           </Container>
         </Grid>
         <Grid item ref={contactRef} style={{textAlign: 'center'}}>
           <Container m={1000}>
-            <h1>Contact me</h1>
-            <p>Email me at Tonyliao2009@gmail.com</p>
+            <Typography variant="h3" inline>Contact Me</Typography>
+            <Typography variant="h4" inline>Tonyliao2009@gmail.com</Typography>
           </Container>
         </Grid>
       </Grid>
