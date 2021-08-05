@@ -3,7 +3,7 @@ import { Tooltip, Container, Typography} from '@material-ui/core';
 import styled, { ThemeProvider, keyframes } from 'styled-components';
 import { DiGithubBadge } from "react-icons/di";
 import { AiFillLinkedin } from "react-icons/ai";
-import { ImArrowDown2 } from "react-icons/im";
+import { FiArrowDownCircle } from "react-icons/fi";
 export default function Intro ({onscroll, about}) {
   const themeLi = {
     main: "#0a66c2",
@@ -41,10 +41,11 @@ export default function Intro ({onscroll, about}) {
 `;
   const StyledDown = styled.div`
     align: center;
-    font-size: 75px;
+    font-size: 50px;
     bottom: 1px;
-    width:75px;
+    width:50px;
     margin: 0 auto;
+    margin-top: 200px;
     cursor: pointer;
     animation: ${upDown} 3s linear infinite;
 
@@ -69,7 +70,7 @@ export default function Intro ({onscroll, about}) {
         </Tooltip>
       </ThemeProvider>
       <StyledDown onClick={() => onscroll(about)}>
-        <ImArrowDown2 />
+        <FiArrowDownCircle />
       </StyledDown>
     </Container>
   )

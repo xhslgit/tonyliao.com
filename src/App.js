@@ -40,6 +40,9 @@ const App = () => {
             <Typography variant="h3" align="center">Projects</Typography>
             <Typography variant="h4">LoLDodgeList</Typography>
             <Typography variant="h4">BigBrain</Typography>
+            <Typography variant="h4">JobHunta</Typography>
+            <Typography variant="h4">Gloria Romanus</Typography>
+            <Typography variant="h4">BigBrain</Typography>
             
           </Container>
         </Grid>

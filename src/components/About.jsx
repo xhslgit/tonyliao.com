@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography, Box, Tooltip} from '@material-ui/core';
-import { DiGithubBadge, DiDatabase, DiHaskell, DiJavascript, DiJava, DiHtml5, DiMarkdown, DiPerl, DiPython, DiReact} from "react-icons/di";
+import { DiGithubBadge, DiPostgresql, DiHaskell, DiJavascript, DiJava, DiHtml5, DiSqllite, DiPerl, DiPython, DiReact} from "react-icons/di";
 import { CgCPlusPlus } from "react-icons/cg";
 import { SiGnubash } from "react-icons/si";
 import { GiAustralia } from "react-icons/gi";
@@ -14,6 +14,18 @@ export default function About () {
   }
   const themeJS = {
     main: "gold",
+  }
+  const themePost = {
+    main: "#30628a"
+  }
+  const themeSqlite = {
+    main: "#013856"
+  }
+  const themePerl = {
+    main: "#3949ab"
+  }
+  const themeReact = {
+    main: "#61dafb"
   }
   const ContStyle = {
     margin: 'auto',
@@ -30,6 +42,18 @@ export default function About () {
       transform: scale(1.2);
     }
   `;
+
+  const CourseBox = styled(Box)`
+    border:2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 2px 5px;
+    transition: transform .2s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  `
   IconBox.defaultProps = {
     theme: {
       main: "black"
@@ -48,6 +72,7 @@ export default function About () {
       </Typography>
       <Typography variant="h2" align="center">Skills</Typography>
       <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-around" width="800px" style={{margin: 'auto'}}>
+
         <ThemeProvider theme={themeHa}>
           <Tooltip title="Haskell" arrow>
             <IconBox >
@@ -55,15 +80,19 @@ export default function About () {
             </IconBox>
           </Tooltip>
         </ThemeProvider>
+
         <ThemeProvider theme={themeHTML}>
           <IconBox>
             <DiHtml5 />
           </IconBox>
         </ThemeProvider>
 
-        <IconBox>
-          <DiDatabase />
-        </IconBox>
+        <ThemeProvider theme={themePost}>
+          <IconBox>
+            <DiPostgresql />
+          </IconBox>
+        </ThemeProvider>
+
         <ThemeProvider theme={themeJS}>
           <IconBox>
             <DiJavascript />
@@ -73,29 +102,59 @@ export default function About () {
         <IconBox>
           <DiJava />
         </IconBox>
+
         <IconBox>
           <DiGithubBadge />
         </IconBox>
-        <IconBox>
-          <DiMarkdown />
-        </IconBox>
-        <IconBox>
-          <DiPerl />
-        </IconBox>
+
+        <ThemeProvider theme={themeSqlite}>
+          <IconBox>
+            <DiSqllite />
+          </IconBox>
+        </ThemeProvider>
+
+        <ThemeProvider theme={themePerl}>
+          <IconBox>
+            <DiPerl />
+          </IconBox>
+        </ThemeProvider>
+
         <IconBox>
           <DiPython />
         </IconBox>
-        <IconBox>
-          <DiReact />
-        </IconBox>
+
+        <ThemeProvider theme={themeReact}>
+          <IconBox>
+            <DiReact />
+          </IconBox>
+        </ThemeProvider>
+
         <IconBox>
           <CgCPlusPlus />
         </IconBox>
+
         <IconBox>
           <SiGnubash />
         </IconBox>
       </Box>
       <Typography variant="h2" align="center">Notable Courses taken during University</Typography>
+      <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-around" width="1000px" column="">
+        <CourseBox>
+          <Typography variant="h5" align="center">COMP6080 - Web Front-End Programming</Typography>
+        </CourseBox>
+        <CourseBox>
+          <Typography variant="h5" align="center">COMP3311 - 	Database Systems</Typography>
+        </CourseBox>
+        <CourseBox>
+          <Typography variant="h5" align="center">COMP2521 - 	Data Structures and Algorithms</Typography>
+        </CourseBox>
+        <CourseBox>
+          <Typography variant="h5" align="center">COMP3121 - 	Algorithms & Programming Tech</Typography>
+        </CourseBox>
+        <CourseBox>
+          <Typography variant="h5" align="center">COMP6771 - 	Advanced C++ Programming</Typography>
+        </CourseBox>
+      </Box>
       <Typography variant="h3" align="center">Languages</Typography>
       <Typography variant="caption1" align="center" style={{fontWeight: '400'}}>English Chinese Korean Japanese</Typography>
     </Container>
