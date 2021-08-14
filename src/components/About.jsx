@@ -138,7 +138,7 @@ export default function About () {
         </IconBox>
       </Box>
       <Typography variant="h2" align="center">Notable Courses taken during University</Typography>
-      <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-around" width="1000px" column="">
+      <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="center" width="1000px" column="">
         <CourseBox>
           <Typography variant="h5" align="center">COMP6080 - Web Front-End Programming</Typography>
         </CourseBox>
@@ -155,8 +155,8 @@ export default function About () {
           <Typography variant="h5" align="center">COMP6771 - 	Advanced C++ Programming</Typography>
         </CourseBox>
       </Box>
-      <Typography variant="h3" align="center">Languages</Typography>
-      <Typography variant="caption1" align="center" style={{fontWeight: '400'}}>English Chinese Korean Japanese</Typography>
+      {/* <Typography variant="h4" align="center">Languages</Typography>
+      <Typography variant="h6" align="center" style={{fontWeight: '400', textAlign: 'center'}}>English Chinese Korean Japanese</Typography> */}
     </Container>
   );
 }
