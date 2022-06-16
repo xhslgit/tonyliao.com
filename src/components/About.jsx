@@ -61,17 +61,48 @@ export default function About () {
   }
   return (
     <Container maxWidth='xl' style={ContStyle}>
-      <Typography variant="h5" align="center" style={{fontWeight: '500'}}>
-        I am a full stack developer<br></br>
-        currently pursuing a Bachelor of Engineering (Honours) majoring in Software (2019-2023)<br></br>
-        at the University of New South Wales<br></br>
+      <Typography variant="h5" align="center" style={{fontWeight: '500', paddingTop: '200px'}}>
+        I am a full stack developer currently pursuing a<br></br>
+        Bachelor of Computer Science (2019-2022)
+        @ University of New South Wales<br></br>
         based in Sydney, Australia <br></br>
         <GiAustralia />
         <br></br>
-        I enjoy creating stuff
+
+
       </Typography>
-      <Typography variant="h2" align="center">Skills</Typography>
-      <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-around" width="800px" style={{margin: 'auto'}}>
+      <Typography variant="h2" align="center" style={{paddingTop: '100px'}}>Skills</Typography>
+      <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-around" width="800px" style={{margin: 'auto', paddingBottom: '200px'}}>
+
+        <Tooltip title="Python" arrow>
+          <IconBox>
+              <DiPython />
+          </IconBox>
+        </Tooltip>
+
+        
+          <Tooltip title="C++" arrow>
+            <IconBox>
+              <CgCPlusPlus />
+            </IconBox>
+          </Tooltip>
+       
+
+        <ThemeProvider theme={themeJS}>
+          <Tooltip title="JavaScript" arrow>
+            <IconBox>
+              <DiJavascript />
+            </IconBox>
+          </Tooltip>
+        </ThemeProvider>
+
+        <ThemeProvider theme={themeReact}>
+          <Tooltip title="React" arrow>
+            <IconBox>
+              <DiReact />
+            </IconBox>
+          </Tooltip>
+        </ThemeProvider>
 
         <ThemeProvider theme={themeHa}>
           <Tooltip title="Haskell" arrow>
@@ -82,62 +113,56 @@ export default function About () {
         </ThemeProvider>
 
         <ThemeProvider theme={themeHTML}>
-          <IconBox>
-            <DiHtml5 />
-          </IconBox>
+          <Tooltip title="HTML" arrow>
+            <IconBox>
+              <DiHtml5 />
+            </IconBox>
+          </Tooltip>
         </ThemeProvider>
 
         <ThemeProvider theme={themePost}>
-          <IconBox>
-            <DiPostgresql />
-          </IconBox>
+          <Tooltip title="PostgreSQL" arrow>
+            <IconBox>
+              <DiPostgresql />
+            </IconBox>
+          </Tooltip>
         </ThemeProvider>
 
-        <ThemeProvider theme={themeJS}>
+        <Tooltip title="Java" arrow>
           <IconBox>
-            <DiJavascript />
+              <DiJava />
           </IconBox>
-        </ThemeProvider>
+        </Tooltip>
 
-        <IconBox>
-          <DiJava />
-        </IconBox>
-
-        <IconBox>
-          <DiGithubBadge />
-        </IconBox>
+        <Tooltip title="GitHub" arrow>
+          <IconBox>
+              <DiGithubBadge />
+          </IconBox>
+        </Tooltip>
 
         <ThemeProvider theme={themeSqlite}>
-          <IconBox>
-            <DiSqllite />
-          </IconBox>
+          <Tooltip title="SQLite" arrow>
+            <IconBox>
+              <DiSqllite />
+            </IconBox>
+          </Tooltip>
         </ThemeProvider>
 
         <ThemeProvider theme={themePerl}>
-          <IconBox>
-            <DiPerl />
-          </IconBox>
+          <Tooltip title="Perl" arrow>
+            <IconBox>
+              <DiPerl />
+            </IconBox>
+          </Tooltip>
         </ThemeProvider>
 
-        <IconBox>
-          <DiPython />
-        </IconBox>
-
-        <ThemeProvider theme={themeReact}>
+        <Tooltip title="Bash" arrow>
           <IconBox>
-            <DiReact />
+              <SiGnubash />
           </IconBox>
-        </ThemeProvider>
-
-        <IconBox>
-          <CgCPlusPlus />
-        </IconBox>
-
-        <IconBox>
-          <SiGnubash />
-        </IconBox>
+        </Tooltip>
       </Box>
-      <Typography variant="h2" align="center">Notable Courses taken during University</Typography>
+      {/* <Typography variant="h2" align="center">Notable Courses taken during University</Typography>
       <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="center" width="1000px" column="">
         <CourseBox>
           <Typography variant="h5" align="center">COMP6080 - Web Front-End Programming</Typography>
@@ -154,7 +179,7 @@ export default function About () {
         <CourseBox>
           <Typography variant="h5" align="center">COMP6771 - 	Advanced C++ Programming</Typography>
         </CourseBox>
-      </Box>
+      </Box> */}
       {/* <Typography variant="h4" align="center">Languages</Typography>
       <Typography variant="h6" align="center" style={{fontWeight: '400', textAlign: 'center'}}>English Chinese Korean Japanese</Typography> */}
     </Container>
