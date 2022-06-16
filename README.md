@@ -1,2 +1,4 @@
 # Personal Portfolio
-This is the code for my own website
+This is my personal portfolio showing information about me and my projects
+## Tech
+Created with ReactJS
