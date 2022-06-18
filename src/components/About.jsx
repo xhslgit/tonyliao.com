@@ -43,17 +43,17 @@ export default function About () {
     }
   `;
 
-  const CourseBox = styled(Box)`
-    border:2px solid black;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 2px 5px;
-    transition: transform .2s;
+  // const CourseBox = styled(Box)`
+  //   border:2px solid black;
+  //   border-radius: 5px;
+  //   margin: 5px;
+  //   padding: 2px 5px;
+  //   transition: transform .2s;
 
-    &:hover {
-      transform: scale(1.02);
-    }
-  `
+  //   &:hover {
+  //     transform: scale(1.02);
+  //   }
+  // `
   IconBox.defaultProps = {
     theme: {
       main: "black"

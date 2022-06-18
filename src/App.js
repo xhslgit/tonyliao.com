@@ -3,7 +3,7 @@ import Intro from './components/Intro';
 import About from './components/About';
 import Project from './components/Project';
 import { useRef } from 'react'
-import { Container, Grid, Typography} from '@material-ui/core';
+import { Container, Grid} from '@material-ui/core';
 const App = () => {
   let introRef = useRef();
   let aboutRef = useRef();
