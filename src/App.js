@@ -17,17 +17,27 @@ const App = () => {
     { url: "./project_imgs/Screenshot_1.jpg"},
   ];
 
-  const BBimages = [
-
+  const JHimages = [
+    { url: "./project_imgs/JH_1.jpg"},
+    { url: "./project_imgs/JH_2.jpg"},
+    { url: "./project_imgs/JH_3.jpg"},
+    { url: "./project_imgs/JH_4.jpg"},
   ];
 
   const LDLimages = [
-    { url: "./project_imgs/Screenshot_1.jpg"},
-    { url: "./project_imgs/Screenshot_1.jpg"},
+    { url: "./project_imgs/LDL_1.jpg"},
+    { url: "./project_imgs/LDL_2.jpg"},
+    { url: "./project_imgs/LDL_3.jpg"},
+    { url: "./project_imgs/LDL_4.jpg"},
   ]
 
-  const GRimages = [
-
+  const BBimages = [
+    { url: "./project_imgs/BB_5.jpg"},
+    { url: "./project_imgs/BB_1.jpg"},
+    { url: "./project_imgs/BB_4.jpg"},
+    { url: "./project_imgs/BB_3.jpg"},
+    { url: "./project_imgs/BB_2.jpg"},
+    { url: "./project_imgs/BB_6.jpg"},
   ];
 
   const PWimages = [
@@ -55,31 +65,31 @@ const App = () => {
             about={aboutRef}
           />
         </Grid>
-        <Grid item ref={aboutRef}>
+        <Grid item ref={aboutRef} style={{backgroundColor: '#f2f2f2', width: '100%'}}>
           <About />
         </Grid>
         <Grid item ref={projectRef} style={{paddingBottom: '200px'}}>
-          <Container m={1000} id="project" style={{height: '140vh', width: '100vw'}}>
-            <Typography className="title-font" variant="h3" align="center">Projects</Typography>
+          <Container m={1000} id="project" style={{height: '140vh', width: '100vw', paddingTop: '100px'}}>
+            <h1 className="title-font" align="center">My Work</h1>
             <Project
               title="BigBrain"
               align="left"
               desc={"BigBrain is a lightweight quiz platform closely modelled off of the popular Kahoot.\nThis web-based app has an admin interface with in-depth features, ability to create games with custom questions, live games and post-game statistics.\nAn individual project created with ReactJS for COMP6080 - Web Front-End Programming"}
-              images={images}
-              github="https://github.com/gidizim/etchness"
+              images={BBimages}
+              github="https://github.com/xhslgit/BigBrain"
             />
             <Project
               title="LoLDodgeList"
               align="right"
               desc={"LoLDodgeList is a web-based application that trackers League of Legends usernames via the use of private, shared and public lists. Users have the ability to add/remove players to the global and their own private list and create/share shared lists with other users. \nCreated with Python, HTML, CSS along with SQLite databases"}
-              images={images}
-              github="https://github.com/gidizim/etchness"
+              images={LDLimages}
+              github="https://github.com/AliMickey/dodgeListLoL"
             />
             <Project
               title="JobHunta"
               align="left"
               desc={"Job-Hunta, takes popular job search APIs such as CareerJet, Adzuna, and GitHub Jobs, and combines them into one integrated job hub for our user's convenience, whilst offering a multitude of quality features.\nUniversity group project created for SENG2021"}
-              images={images}
+              images={JHimages}
               github="https://github.com/gidizim/etchness"
             />
             <Project

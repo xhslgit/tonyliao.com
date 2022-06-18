@@ -61,7 +61,7 @@ export default function Project ({title, align, desc, images, github}) {
           />
           </ImgContainer>
           <TextContainer>
-            <Typography variant="h4">{title}</Typography>
+            <span className="title-font">{title}</span>
             <Typography variant="h6">{newDesc}</Typography>
             <ThemeProvider theme={themeGh}>
               <Tooltip title="Github" arrow>
@@ -73,7 +73,7 @@ export default function Project ({title, align, desc, images, github}) {
       :
         <Fragment>
           <TextContainer>
-            <Typography variant="h4">{title}</Typography>
+          <span className="title-font">{title}</span>
             <Typography variant="h6">{newDesc}</Typography>
             <ThemeProvider theme={themeGh}>
               <Tooltip title="Github" arrow>

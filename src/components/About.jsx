@@ -71,7 +71,7 @@ export default function About () {
 
 
       </Typography>
-      <Typography variant="h2" align="center" style={{paddingTop: '100px'}}>Skills</Typography>
+      <h1 className="title-font" align="center" style={{paddingTop: '100px'}}>Skills</h1>
       <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-around" width="800px" style={{margin: 'auto', paddingBottom: '200px'}}>
 
         <Tooltip title="Python" arrow>

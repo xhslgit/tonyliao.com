@@ -20,13 +20,13 @@ export default function NavBar ({onscroll, intro, about, project, contact}) {
   return (
     <AppBar position='fixed' color='transparent' elevation={0}>
       <Toolbar>
-        <Typography variant="h6" className={classes.title} onClick={() => onscroll(intro)}>
-          Tony Liao
+        <Typography variant="h6" className={classes.title} style={{fontWeight: 550}} onClick={() => onscroll(intro)}>
+          TONY LIAO
         </Typography>
         <Button color="inherit" onClick={() => onscroll(about)}>About Me</Button>
         <Button color="inherit" onClick={() => onscroll(project)}>Projects</Button>
         <Button color="inherit" onClick={() => window.open("https://drive.google.com/file/d/1bFYfG0HsGX1CewtSMIYI-55kiXcDyjSq/view?usp=sharing")}>Resume</Button>
-        <Button color="inherit" onClick={() => onscroll(contact)}>Contact</Button>
+        <Button color="inherit" onClick={() => window.open("mailto:tonyliao71@gmail.com")}>Email me</Button>
       </Toolbar>
     </AppBar>
   )
