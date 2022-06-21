@@ -32,6 +32,15 @@ export default function About () {
     marginTop: '25px',
     height:'100vh',
   }
+
+  const SkillsBox = styled(Box)`
+    margin: auto;
+    padding-bottom: 200px;
+    width: 800px;
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
+  `;
   const IconBox = styled(Box)`
     color: ${props => props.theme.main};
     margin: 5px;
@@ -41,19 +50,11 @@ export default function About () {
     &:hover {
       transform: scale(1.2);
     }
+    @media only screen and (max-width: 600px) {
+      font-size: 50px;
+    }
   `;
 
-  // const CourseBox = styled(Box)`
-  //   border:2px solid black;
-  //   border-radius: 5px;
-  //   margin: 5px;
-  //   padding: 2px 5px;
-  //   transition: transform .2s;
-
-  //   &:hover {
-  //     transform: scale(1.02);
-  //   }
-  // `
   IconBox.defaultProps = {
     theme: {
       main: "black"
@@ -72,7 +73,7 @@ export default function About () {
 
       </Typography>
       <h1 className="title-font" align="center" style={{paddingTop: '100px'}}>Skills</h1>
-      <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-around" width="800px" style={{margin: 'auto', paddingBottom: '200px'}}>
+      <SkillsBox display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-around">
 
         <Tooltip title="Python" arrow>
           <IconBox>
@@ -161,27 +162,7 @@ export default function About () {
               <SiGnubash />
           </IconBox>
         </Tooltip>
-      </Box>
-      {/* <Typography variant="h2" align="center">Notable Courses taken during University</Typography>
-      <Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="center" width="1000px" column="">
-        <CourseBox>
-          <Typography variant="h5" align="center">COMP6080 - Web Front-End Programming</Typography>
-        </CourseBox>
-        <CourseBox>
-          <Typography variant="h5" align="center">COMP3311 - 	Database Systems</Typography>
-        </CourseBox>
-        <CourseBox>
-          <Typography variant="h5" align="center">COMP2521 - 	Data Structures and Algorithms</Typography>
-        </CourseBox>
-        <CourseBox>
-          <Typography variant="h5" align="center">COMP3121 - 	Algorithms & Programming Tech</Typography>
-        </CourseBox>
-        <CourseBox>
-          <Typography variant="h5" align="center">COMP6771 - 	Advanced C++ Programming</Typography>
-        </CourseBox>
-      </Box> */}
-      {/* <Typography variant="h4" align="center">Languages</Typography>
-      <Typography variant="h6" align="center" style={{fontWeight: '400', textAlign: 'center'}}>English Chinese Korean Japanese</Typography> */}
+      </SkillsBox>
     </Container>
   );
 }
