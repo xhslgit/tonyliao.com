@@ -115,10 +115,4 @@ const App = () => {
     </div>
   );
 }
-        {/* <Grid item ref={contactRef} style={{textAlign: 'center', height: '30vh'}}>
-          <Container m={1000}>
-            <Typography variant="h3" inline>Contact Me</Typography>
-            <Typography variant="h4" inline>Tonyliao71@gmail.com</Typography>
-          </Container>
-        </Grid> */}
 export default App;

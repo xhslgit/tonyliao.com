@@ -23,23 +23,17 @@ export default function Project ({title, align, desc, images, github}) {
   const ProjectContainer = styled.div`
     display: flex;
     flex-direction: row;
-    // border:2px solid black;
-    // border-radius: 5px;
     margin-left: calc(60% - 50vw);
     width: 90vw;
     padding-bottom: 200px;
-    // margin: 0 auto;
-    // padding: 0 5px;
   `
   const TextContainer = styled.div`
   text-align: ${align};
-  // border:2px solid black;
   border-radius: 5px;
   width:70%;
   padding: 0 5px;
   `
   const ImgContainer = styled.div`
-  // border:2px solid black;
   border-radius: 5px;
   width:800;
   padding: 0 5px;
