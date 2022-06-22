@@ -68,6 +68,7 @@ const App = () => {
         <Grid item ref={aboutRef} style={{backgroundColor: '#f2f2f2', width: '100%'}}>
           <About />
         </Grid>
+        
         <Grid item ref={projectRef} style={{paddingBottom: '200px'}}>
           <Container m={1000} id="project" style={{height: '140vh', width: '100vw', paddingTop: '100px'}}>
             <h1 className="title-font" align="center">My Work</h1>
@@ -109,15 +110,9 @@ const App = () => {
           </Container>
         </Grid>
 
-        {/* <Grid item ref={contactRef} style={{textAlign: 'center', height: '30vh'}}>
-          <Container m={1000}>
-            <Typography variant="h3" inline>Contact Me</Typography>
-            <Typography variant="h4" inline>Tonyliao71@gmail.com</Typography>
-          </Container>
-        </Grid> */}
+
       </Grid>
     </div>
   );
 }
-
 export default App;

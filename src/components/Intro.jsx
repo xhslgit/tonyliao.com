@@ -18,6 +18,7 @@ export default function Intro ({onscroll, about}) {
     marginTop: '200px',
     height:'calc(100vh - 200px)',
   }
+  
   const StyledIcon = styled.a`
     text-decoration: none;
     color: ${props => props.theme.main};
@@ -51,6 +52,9 @@ export default function Intro ({onscroll, about}) {
 
     &:hover {
       color: #4d4d4d;
+    }
+    @media only screen and (max-width: 600px) {
+      display: none;
     }
   `;
   return (
