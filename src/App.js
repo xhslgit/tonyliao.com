@@ -69,7 +69,7 @@ const App = () => {
           <About />
         </Grid>
         
-        {/* <Grid item ref={projectRef} style={{paddingBottom: '200px'}}>
+        <Grid item ref={projectRef} style={{paddingBottom: '200px'}}>
           <Container m={1000} id="project" style={{height: '140vh', width: '100vw', paddingTop: '100px'}}>
             <h1 className="title-font" align="center">My Work</h1>
             <Project
@@ -108,7 +108,7 @@ const App = () => {
               github="https://github.com/xhslgit/tonyliao.com"
             />
           </Container>
-        </Grid> */}
+        </Grid>
 
 
       </Grid>

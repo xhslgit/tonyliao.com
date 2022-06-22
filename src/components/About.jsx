@@ -62,7 +62,7 @@ export default function About () {
   }
   return (
     <Container maxWidth='xl' style={ContStyle}>
-      <Typography variant="h5" align="center" style={{fontWeight: '500', paddingTop: '200px'}}>
+      <Typography variant="h5" align="center" style={{fontWeight: '500', paddingTop: '50px'}}>
         I am a full stack developer currently pursuing a<br></br>
         Bachelor of Computer Science (2019-2022)
         @ University of New South Wales<br></br>

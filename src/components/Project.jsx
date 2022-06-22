@@ -26,17 +26,30 @@ export default function Project ({title, align, desc, images, github}) {
     margin-left: calc(60% - 50vw);
     width: 90vw;
     padding-bottom: 200px;
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      padding: auto;
+    }
   `
   const TextContainer = styled.div`
-  text-align: ${align};
-  border-radius: 5px;
-  width:70%;
-  padding: 0 5px;
+    text-align: ${align};
+    border-radius: 5px;
+    width:70%;
+    padding: 0 5px;
+    @media only screen and (max-width: 600px) {
+      text-align: center;
+      width: 100%
+    }
   `
   const ImgContainer = styled.div`
-  border-radius: 5px;
-  width:800;
-  padding: 0 5px;
+    border-radius: 5px;
+    width: 800;
+    padding: 0 5px;
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
   `
 
   const newDesc = desc.split('\n').map(str =><p>{str}</p>);
