@@ -1,9 +1,10 @@
-import React, {Fragment}  from 'react';
+import React, { Fragment }  from 'react';
 import { Typography, Tooltip } from '@material-ui/core';
 import styled from 'styled-components';
-import SimpleImageSlider from 'react-simple-image-slider';
+import { Slide } from 'react-slideshow-image';
 import { DiGithubBadge } from "react-icons/di";
 import { ThemeProvider } from 'styled-components';
+import 'react-slideshow-image/dist/styles.css'
 export default function Project ({title, align, desc, images, github}) {
   const themeGh = {
     main: "black",
@@ -47,9 +48,6 @@ export default function Project ({title, align, desc, images, github}) {
     border-radius: 5px;
     width: 800;
     padding: 0 5px;
-    @media only screen and (max-width: 600px) {
-      display: none;
-    }
   `
 
   const newDesc = desc.split('\n').map(str =><p>{str}</p>);
@@ -58,14 +56,7 @@ export default function Project ({title, align, desc, images, github}) {
       {align === "right" ?
         <Fragment>
           <ImgContainer>
-          <SimpleImageSlider 
-            width={800}
-            height={400}
-            images={images}
-            showBullets={true}
-            showNavs={true}
-            slideDuration={1.5}
-          />
+      
           </ImgContainer>
           <TextContainer>
             <span className="title-font">{title}</span>
@@ -89,15 +80,15 @@ export default function Project ({title, align, desc, images, github}) {
             </ThemeProvider>
           </TextContainer>
           <ImgContainer>
-          <SimpleImageSlider 
-            width={800}
-            height={400}
-            images={images}
-            showBullets={true}
-            showNavs={true}
-            slideDuration={1.5}
-            bgColor="#111"
-          />
+          <Slide>
+            {images.map((image, idx) => (
+              <div className="each-slide" key={idx}>
+                <div style={{'backgroundImage': `url(${image.url})`}}>
+                  <span>{'yay'}</span>
+                </div>
+              </div>
+            ))}
+          </Slide>
           </ImgContainer>
         </Fragment>
       }
